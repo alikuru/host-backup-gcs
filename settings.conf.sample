@@ -1,0 +1,14 @@
+# Mail settings
+mail_from="sender@domain.tld"
+mail_to="receiver@domain.tld"
+postmark_token="token-created-by-postmak-service"
+
+# Directories to backup
+backup_dirs="/Users/usera/Desktop/,/Users/userb/Documents/"
+
+# Google Cloud Storage settings
+# You might want to add -n to gs_sync_params if you want a test run before
+# sending your backups to Google Cloud Storage.
+gs_sync_params="-r -C -d"
+gs_bucket_vhosts="my-backup-bucket"
+gs_sync_exclude=".*\.DS_Store$|.*\.localized$"
