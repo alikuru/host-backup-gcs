@@ -19,12 +19,12 @@ if [[ -f $scriptpath/settings.conf ]]; then
     if [[ -z "$gs_sync_exclude" ]]; then
         for dir in ${backup_dirs//,/ }
         do
-            gsutil -m rsync $gs_sync_params $dir gs://$gs_bucket_vhosts/$(hostname)/$(basename $dir) 2>> $scriptpath/$logfile
+            gsutil -m rsync $gs_sync_params "$dir" gs://$gs_bucket/$(hostname)/"$(basename "$dir")" 2>> $scriptpath/$logfile
         done
     else
         for dir in ${backup_dirs//,/ }
         do
-            gsutil -m rsync $gs_sync_params -x "$gs_sync_exclude" $dir gs://$gs_bucket_vhosts/$(hostname)/$(basename $dir) 2>> $scriptpath/$logfile
+            gsutil -m rsync $gs_sync_params -x "$gs_sync_exclude" "$dir" gs://$gs_bucket/$(hostname)/"$(basename "$dir")" 2>> $scriptpath/$logfile
         done
     fi
     echo $? >> $scriptpath/$exitcodes
