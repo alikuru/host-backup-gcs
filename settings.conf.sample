@@ -4,7 +4,8 @@ mail_to="receiver@domain.tld"
 postmark_token="token-created-by-postmak-service"
 
 # Directories to backup
-backup_dirs="/Users/usera/Desktop/,/Users/userb/Documents/"
+backup_dirs[1]="/Users/john/Desktop/"
+backup_dirs[2]="/Users/jane/Documents/"
 
 # Google Cloud Storage settings
 # You might want to add -n to gs_sync_params if you want a test run before
