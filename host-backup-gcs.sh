@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Basic shell script for creating regular file backups for Unix/Linux based OSes
 # Check settings.conf for details
 # Copyright (C) 2018 Ali Kuru - All Rights Reserved
